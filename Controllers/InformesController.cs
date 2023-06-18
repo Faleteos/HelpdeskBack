@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using HELPDESKPC.Models;
+using HELPDESKPC.ModelsView;
+
 
 namespace HELPDESKPC.Controllers
 {
@@ -22,13 +24,27 @@ namespace HELPDESKPC.Controllers
 
         // GET: api/Informes
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Informe>>> GetInformes()
+        public async Task<ActionResult<IEnumerable<InformesMV>>> GetInformes()
         {
-          if (_context.Informes == null)
-          {
-              return NotFound();
-          }
-            return await _context.Informes.ToListAsync();
+          //if (_context.Informes == null)
+          //{
+          //    return NotFound();
+          //}
+          //  return await _context.Informes.ToListAsync();
+
+            var informes = await _context.Informes.ToListAsync();
+
+            var query = from inf in informes
+                        select new InformesMV
+                        {
+                            IdInforme = inf.IdInforme,
+                            TipoInforme = inf.TipoInforme,
+                            FechaInforme = inf.FechaInforme,
+                            DescInforme = inf.DescInforme,
+                            EstadoInforme = inf.EstadoInforme,
+
+                        };
+            return query.ToList();
         }
 
         // GET: api/Informes/5

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using HELPDESKPC.Models;
+using HELPDESKPC.ModelsView;
 
 namespace HELPDESKPC.Controllers
 {
@@ -22,13 +23,37 @@ namespace HELPDESKPC.Controllers
 
         // GET: api/Personas
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Persona>>> GetPersonas()
+        public async Task<ActionResult<IEnumerable<PersonasMV>>> GetPersonas()
         {
-          if (_context.Personas == null)
-          {
-              return NotFound();
-          }
-            return await _context.Personas.ToListAsync();
+            //if (_context.Personas == null)
+            //{
+            //    return NotFound();
+            //}
+            //  return await _context.Personas.ToListAsync();
+            var personas = await _context.Personas.ToListAsync();
+            var adcrs = await _context.Adcrs.ToListAsync();
+
+            var query = from per in personas
+                        join adc in adcrs on per.IdPersona equals adc.IdPersona
+                        select new PersonasMV
+                        {
+                            IdPersona = per.IdPersona,
+                            TipoDoc = per.TipoDoc,
+                            NumDoc = per.NumDoc,
+                            PNombre = per.PNombre,
+                            SNombre = per.SNombre,
+                            PApellido = per.PApellido,
+                            SApellido = per.SApellido,
+                            NumCel = per.NumCel,
+                            Email = per.Email,
+                            Pais = adc.Pais,
+                            Departamento = adc.Departamento,
+                            Ciudad = adc.Ciudad,
+                            Barrio = adc.Barrio,
+                            Direccion = adc.Direccion,
+                        };
+
+            return query.ToList(); 
         }
 
         // GET: api/Personas/5

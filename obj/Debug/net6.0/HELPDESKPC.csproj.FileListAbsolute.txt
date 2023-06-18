@@ -1,10 +1,3 @@
-C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\obj\Debug\net6.0\HELPDESKPC.csproj.AssemblyReference.cache
-C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\obj\Debug\net6.0\HELPDESKPC.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\obj\Debug\net6.0\HELPDESKPC.AssemblyInfoInputs.cache
-C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\obj\Debug\net6.0\HELPDESKPC.AssemblyInfo.cs
-C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\obj\Debug\net6.0\HELPDESKPC.csproj.CoreCompileInputs.cache
-C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\obj\Debug\net6.0\HELPDESKPC.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\obj\Debug\net6.0\HELPDESKPC.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\bin\Debug\net6.0\appsettings.json
 C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\bin\Debug\net6.0\HELPDESKPC.exe
@@ -79,6 +72,7 @@ C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\bin\Debug\net6.0\System.Co
 C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\bin\Debug\net6.0\System.Composition.Runtime.dll
 C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\bin\Debug\net6.0\System.Composition.TypedParts.dll
 C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\bin\Debug\net6.0\System.Drawing.Common.dll
 C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\bin\Debug\net6.0\System.Reflection.MetadataLoadContext.dll
@@ -254,6 +248,13 @@ C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\bin\Debug\net6.0\runtimes\
 C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\obj\Debug\net6.0\HELPDESKPC.csproj.AssemblyReference.cache
+C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\obj\Debug\net6.0\HELPDESKPC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\obj\Debug\net6.0\HELPDESKPC.AssemblyInfoInputs.cache
+C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\obj\Debug\net6.0\HELPDESKPC.AssemblyInfo.cs
+C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\obj\Debug\net6.0\HELPDESKPC.csproj.CoreCompileInputs.cache
+C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\obj\Debug\net6.0\HELPDESKPC.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\obj\Debug\net6.0\HELPDESKPC.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\obj\Debug\net6.0\staticwebassets\msbuild.HELPDESKPC.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\obj\Debug\net6.0\staticwebassets\msbuild.build.HELPDESKPC.props
 C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.HELPDESKPC.props
@@ -268,4 +269,3 @@ C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\obj\Debug\net6.0\refint\HE
 C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\obj\Debug\net6.0\HELPDESKPC.pdb
 C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\obj\Debug\net6.0\HELPDESKPC.genruntimeconfig.cache
 C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\obj\Debug\net6.0\ref\HELPDESKPC.dll
-C:\Users\SRP-BOOK1\source\repos\HELPDESKPC\HELPDESKPC\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll

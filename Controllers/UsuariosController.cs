@@ -32,21 +32,28 @@ namespace HELPDESKPC.Controllers
         }
 
         // GET: api/Usuarios/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Usuario>> GetUsuario(int id)
+        [HttpGet("{dataLogin}")]
+        public string GetLoginAcces(string dataLogin)
         {
-          if (_context.Usuarios == null)
-          {
-              return NotFound();
-          }
-            var usuario = await _context.Usuarios.FindAsync(id);
 
-            if (usuario == null)
+            string[] StrlSplit = dataLogin.Split(' '); // Juan 12345
+            string RstFinal = "";
+
+            var query = _context.Usuarios.Where(s => s.NombreUsuario == StrlSplit[0].ToString() && s.Password == StrlSplit[1].ToString()).Select(e => new
             {
-                return NotFound();
-            }
+                 usuario=e.NombreUsuario,
+                 pswd=e.Password
+            });
 
-            return usuario;
+            foreach (var s in query)
+            {
+                RstFinal += s.usuario;
+            }
+             
+
+
+            return RstFinal;
+          
         }
 
         // PUT: api/Usuarios/5

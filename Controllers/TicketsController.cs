@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using HELPDESKPC.Models;
+using HELPDESKPC.ModelsView;
+using System.Diagnostics.CodeAnalysis;
+using Microsoft.CodeAnalysis.VisualBasic.Syntax;
 
 namespace HELPDESKPC.Controllers
 {
@@ -22,13 +25,58 @@ namespace HELPDESKPC.Controllers
 
         // GET: api/Tickets
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Ticket>>> GetTickets()
+        public async Task<ActionResult<IEnumerable<TicketsMV>>> GetTickets()
         {
-          if (_context.Tickets == null)
-          {
-              return NotFound();
-          }
-            return await _context.Tickets.ToListAsync();
+            //if (_context.Tickets == null)
+            //{
+            //    return NotFound();
+            //}
+            //  return await _context.Tickets.ToListAsync();
+
+            var tickets = await _context.Tickets.ToListAsync();
+            var informes = await _context.Informes.ToListAsync();
+            var repuestos = await _context.Repuestos.ToListAsync();
+            var servicios = await _context.Servicios.ToListAsync();
+            var usuarios = await _context.Usuarios.ToListAsync();
+
+            var query = from tic in tickets
+                        join inf in informes on tic.IdInforme equals inf.IdInforme into inf1
+                        from inf2 in inf1.DefaultIfEmpty()
+                        join rep in repuestos on tic.IdRepuesto equals rep.IdRepuesto into rep1
+                        from rep2 in rep1.DefaultIfEmpty()
+                        join ser in servicios on tic.IdServicio equals ser.IdServicio into ser1
+                        from ser2 in ser1.DefaultIfEmpty()
+                        join usr in usuarios on tic.IdUsuario equals usr.IdUsuario into usr1
+                        from usr2 in usr1.DefaultIfEmpty()
+
+                        select new TicketsMV
+                        {
+                            IdTicket = tic.IdTicket,
+                            IdCaseTicket = tic.IdCaseTicket,
+                            TipoTicket = tic.TipoTicket,
+                            FechaTicket = tic.FechaTicket,
+                            EstadoTicket = tic.EstadoTicket,
+                            //IdInforme = inf2 == null? : inf2.IdInforme,
+                            TipoInforme = inf2.TipoInforme, 
+                            FechaInforme = inf2.FechaInforme,
+                            DescInforme = inf2.DescInforme,
+                            EstadoInforme = inf2.EstadoInforme,
+                            IdServicio = ser2.IdServicio,
+                            NombServ = ser2.NombServ,
+                            ValorServicio = ser2.ValorServicio,
+                            EstadoServicio = ser2.EstadoServicio,
+                            IdRepuesto = rep2.IdRepuesto,
+                            TipoRep = rep2.TipoRep,
+                            Marca = rep2.Marca,
+                            CapRep = rep2.CapRep,
+                            ValorRep = rep2.ValorRep,
+                            StockRep = rep2.StockRep,
+                            IdUsuario = usr2.IdUsuario,
+                            NombreUsuario = usr2.NombreUsuario,
+
+                        };
+
+            return query.ToList();
         }
 
         // GET: api/Tickets/5
